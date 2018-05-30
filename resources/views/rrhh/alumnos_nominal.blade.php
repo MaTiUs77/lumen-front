@@ -110,8 +110,8 @@
                     ciclo: 2018
                 },
 
-                apiUrl: `{{ env('API_HOST') }}/api`,
-                apiForms: `{{ env('API_HOST') }}/api/forms`,
+                apiUrl: `{{ env('API_GATEWAY') }}/api`,
+                apiForms: `{{ env('API_GATEWAY') }}/api/forms`,
 
                 loading: true,
                 error: ''
@@ -133,7 +133,7 @@
                     var self = this;
                     self.loading = true;
 
-                    axios.get('{{ env('API_HOST') }}/api/dependencia/rrhh/nominal_alumnos_inscriptos',{
+                    axios.get('{{ env('API_GATEWAY') }}/api/dependencia/rrhh/nominal_alumnos_inscriptos',{
                         params: self.filtro
                     })
                     .then(function(response){

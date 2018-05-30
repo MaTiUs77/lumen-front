@@ -81,7 +81,7 @@
         password:null
       },
 
-      apiUrl: `{{ env('API_AUTH_HOST') }}/auth`,
+      apiUrl: `{{ env('API_GATEWAY') }}/auth`,
 
       loading: true,
       error: ''

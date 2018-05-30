@@ -131,7 +131,7 @@
                 this.formSectores();
                 this.formNiveles();
                 axios
-                    .get('{{ env('API_HOST') }}/api/matriculas/cuantitativa/por_seccion?ciclo=2018')
+                    .get('{{ env('API_GATEWAY') }}/api/matriculas/cuantitativa/por_seccion?ciclo=2018')
                     .then(function(response){
 
 /*                        // Formatea el array, genera un agrupamiento por categoria.nombre
@@ -151,7 +151,7 @@
                 formCiudades: function () {
                     var self = this;
                     axios
-                        .get('{{ env('API_HOST') }}/api/forms/ciudades')
+                        .get('{{ env('API_GATEWAY') }}/api/forms/ciudades')
                         .then(function(response){
                             self.ciudades = response.data;
                         })
@@ -162,7 +162,7 @@
                 formSectores: function () {
                     var self = this;
                     axios
-                            .get('{{ env('API_HOST') }}/api/forms/sectores')
+                            .get('{{ env('API_GATEWAY') }}/api/forms/sectores')
                             .then(function(response){
                                 self.sectores = response.data;
                             })
@@ -173,7 +173,7 @@
                 formNiveles: function () {
                     var self = this;
                     axios
-                            .get('{{ env('API_HOST') }}/api/forms/niveles')
+                            .get('{{ env('API_GATEWAY') }}/api/forms/niveles')
                             .then(function(response){
                                 self.niveles = response.data;
                             })

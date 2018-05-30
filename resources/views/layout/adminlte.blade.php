@@ -110,7 +110,7 @@
   var siepauth = new Vue({
     el: '#siepauth',
     data: {
-      apiUrl: `{{ env('API_AUTH_HOST') }}/auth`,
+      apiUrl: `{{ env('API_GATEWAY') }}/auth`,
       userdata: {},
 
       loading: true,
